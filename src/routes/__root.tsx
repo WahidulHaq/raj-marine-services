@@ -50,15 +50,19 @@ function SiteHeader() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.exact }}
-              className={({ isActive }) =>
-                `rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
-                }`
-              }
+              className="rounded-md px-3 py-2 text-sm font-medium transition-colors"
             >
-              {item.label}
+              {({ isActive }) => (
+                <span
+                  className={
+                    isActive
+                      ? "text-primary"
+                      : "text-foreground hover:text-signal"
+                  }
+                >
+                  {item.label}
+                </span>
+              )}
             </Link>
           ))}
         </nav>
