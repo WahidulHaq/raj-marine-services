@@ -4,7 +4,10 @@ export const company = {
   address:
     "C-501, Bldg. No. 2, Indira Nagar, Jai Shankar Yagnik Marg, Sion Koliwada, Mumbai – 400 037",
   landlineLabel: "+91 22 2415 7672 / 2407 2248",
-  landlineHrefs: ["tel:+912224157672", "tel:+912224072248"],
+  landline1: "+91 22 2415 7672",
+  landline1Href: "tel:+912224157672",
+  landline2: "+91 22 2407 2248",
+  landline2Href: "tel:+912224072248",
   mobileLabel: "+91 98 3399 7882",
   mobileHref: "tel:+919833997882",
   emailInfo: "info@psrajshipping.com",

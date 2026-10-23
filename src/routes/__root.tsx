@@ -130,8 +130,12 @@ function SiteFooter() {
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
             <li>{company.address}</li>
             <li>
-              <a href={company.landlineHrefs[0]} className="hover:text-signal">
-                {company.landlineLabel}
+              <a href={company.landline1Href} className="hover:text-signal">
+                {company.landline1}
+              </a>
+              {" · "}
+              <a href={company.landline2Href} className="hover:text-signal">
+                {company.landline2}
               </a>
               <br />
               <a href={company.mobileHref} className="hover:text-signal">

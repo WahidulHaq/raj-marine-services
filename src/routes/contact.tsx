@@ -36,10 +36,10 @@ const contactCards = [
   {
     title: "Call Us",
     lines: [
-      { label: company.landlineLabel, href: company.landlineHrefs[0] },
-      { label: company.landlineLabel.split("/")[1]?.trim() ?? "", href: company.landlineHrefs[1] },
+      { label: company.landline1, href: company.landline1Href },
+      { label: company.landline2, href: company.landline2Href },
       { label: company.mobileLabel, href: company.mobileHref },
-    ].filter((line) => line.label),
+    ],
   },
   {
     title: "Email Us",
