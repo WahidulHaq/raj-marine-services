@@ -14,6 +14,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { company } from "@/lib/company";
 import emblem from "@/assets/psraj-emblem.png.asset.json";
+import mumbaiPort from "@/assets/mumbai-port-authority.png.asset.json";
+import greenTriangle from "@/assets/green-triangle-safety.png.asset.json";
 
 const navItems = [
   { to: "/", label: "Home", exact: true },
