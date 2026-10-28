@@ -14,6 +14,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { company } from "@/lib/company";
 import emblem from "@/assets/psraj-emblem.png.asset.json";
+import mumbaiPort from "@/assets/mumbai-port-authority.png.asset.json";
+import greenTriangle from "@/assets/green-triangle-safety.png.asset.json";
 
 const navItems = [
   { to: "/", label: "Home", exact: true },
@@ -44,6 +46,26 @@ function SiteHeader() {
             </span>
           </span>
         </Link>
+        <div className="flex items-center justify-center gap-3 sm:gap-4">
+          <img
+            src={mumbaiPort.url}
+            alt="Mumbai Port Authority"
+            title="Mumbai Port Authority"
+            className="h-10 w-auto rounded-full sm:h-12"
+            width={48}
+            height={48}
+            loading="lazy"
+          />
+          <img
+            src={greenTriangle.url}
+            alt="National Safety Council — Green Triangle for Safety · Safety Zone"
+            title="National Safety Council — Green Triangle for Safety · Safety Zone"
+            className="h-10 w-auto sm:h-12"
+            width={48}
+            height={48}
+            loading="lazy"
+          />
+        </div>
         <nav aria-label="Main navigation" className="flex flex-wrap items-center justify-center gap-1">
           {navItems.map((item) => (
             <Link
