@@ -13,9 +13,9 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { company } from "@/lib/company";
-import emblem from "@/assets/psraj-emblem.png.asset.json";
-import mumbaiPort from "@/assets/mumbai-port-authority.png.asset.json";
-import greenTriangle from "@/assets/green-triangle-safety.png.asset.json";
+import emblem from "@/assets/psraj-emblem.png";
+import mumbaiPort from "@/assets/mumbai-port-authority.jpg";
+import greenTriangle from "@/assets/green-triangle-safety.png";
 
 const navItems = [
   { to: "/", label: "Home", exact: true },
@@ -31,7 +31,7 @@ function SiteHeader() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-3 sm:flex-row sm:justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src={emblem.url}
+            src={emblem}
             alt="P. S. Raj Shipping Enterprises emblem"
             className="h-12 w-auto"
             width={48}
@@ -48,7 +48,7 @@ function SiteHeader() {
         </Link>
         <div className="flex items-center justify-center gap-3 sm:gap-4">
           <img
-            src={mumbaiPort.url}
+            src={mumbaiPort}
             alt="Mumbai Port Authority"
             title="Mumbai Port Authority"
             className="h-10 w-auto rounded-full sm:h-12"
@@ -57,7 +57,7 @@ function SiteHeader() {
             loading="lazy"
           />
           <img
-            src={greenTriangle.url}
+            src={greenTriangle}
             alt="National Safety Council — Green Triangle for Safety · Safety Zone"
             title="National Safety Council — Green Triangle for Safety · Safety Zone"
             className="h-10 w-auto sm:h-12"
@@ -100,7 +100,7 @@ function SiteFooter() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={emblem.url}
+              src={emblem}
               alt=""
               aria-hidden="true"
               className="h-14 w-auto"
