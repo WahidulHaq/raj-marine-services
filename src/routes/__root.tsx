@@ -160,9 +160,14 @@ function SiteFooter() {
                 {company.landline2}
               </a>
               <br />
-              <a href={company.mobileHref} className="hover:text-signal">
-                {company.mobileLabel}
-              </a>
+              {company.mobileContacts.map((contact, index) => (
+                <span key={contact.href}>
+                  {index > 0 ? " · " : null}
+                  <a href={contact.href} className="hover:text-signal">
+                    {contact.label}
+                  </a>
+                </span>
+              ))}
             </li>
             <li>
               <a

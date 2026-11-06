@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-drydock.jpg";
+import { clientNames } from "@/lib/company";
 import { services } from "@/lib/services";
 
 export const Route = createFileRoute("/")({
@@ -202,6 +203,26 @@ function Index() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* Clients */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="text-center">
+          <p className="eyebrow text-signal">Trusted Relationships</p>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+            Our Clients
+          </h2>
+        </div>
+        <ul className="mt-10 grid gap-x-8 gap-y-4 border-y border-border py-8 sm:grid-cols-2 lg:grid-cols-3">
+          {clientNames.map((client) => (
+            <li
+              key={client}
+              className="border-l-2 border-signal pl-4 font-medium text-foreground"
+            >
+              {client}
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* CTA */}
