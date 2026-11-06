@@ -38,7 +38,7 @@ const contactCards = [
     lines: [
       { label: company.landline1, href: company.landline1Href },
       { label: company.landline2, href: company.landline2Href },
-      { label: company.mobileLabel, href: company.mobileHref },
+      ...company.mobileContacts,
     ],
   },
   {
