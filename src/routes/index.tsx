@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-drydock.jpg";
+import engineRoomImg from "@/assets/engine-room-maintenance.jpg";
+import chippingImg from "@/assets/chipping-scraping.jpg";
+import tankCleaningImg from "@/assets/tank-cleaning.jpg";
+import hullWashingImg from "@/assets/hull-jet-washing.jpg";
+import blastingImg from "@/assets/abrasive-blasting.jpg";
+import hullPaintingImg from "@/assets/ship-hull-painting.jpg";
+import cargoHoldImg from "@/assets/cargo-hold-blasting.jpg";
+import sprayPaintingImg from "@/assets/airless-spray-painting.jpg";
+import marineTeamImg from "@/assets/marine-team.jpg";
 import { clientNames } from "@/lib/company";
 import { services } from "@/lib/services";
 
@@ -39,6 +48,18 @@ const stats = [
   { value: "Mumbai", label: "Ports · Shipyards · Offshore" },
 ];
 
+const workPhotos = [
+  { src: engineRoomImg, alt: "Engine room pipe maintenance aboard a vessel", title: "Engine Room Maintenance" },
+  { src: chippingImg, alt: "Marine worker removing rust and old coating by hand", title: "Chipping & Scraping" },
+  { src: tankCleaningImg, alt: "Workers cleaning the interior of a ship tank", title: "Tank Cleaning" },
+  { src: hullWashingImg, alt: "High-pressure water washing on a ship's hull", title: "Hull Jet Washing" },
+  { src: blastingImg, alt: "Worker in protective gear performing abrasive blasting", title: "Abrasive Blasting" },
+  { src: hullPaintingImg, alt: "Painters applying a protective coating to a vessel", title: "Ship Hull Painting" },
+  { src: cargoHoldImg, alt: "Marine workers preparing a cargo hold surface", title: "Cargo Hold Preparation" },
+  { src: sprayPaintingImg, alt: "Protective spray painting on a ship hull", title: "Protective Spray Coating" },
+  { src: marineTeamImg, alt: "Marine crew standing together aboard a vessel", title: "Our Marine Team" },
+];
+
 function Index() {
   return (
     <>
@@ -55,19 +76,19 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/65 to-primary/10" />
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-6xl px-4 py-16">
-            <p className="eyebrow text-signal-foreground">
+            <p className="eyebrow text-signal-foreground motion-intro">
               ISO 9001:2015 · ABS Certified · Mumbai, India
             </p>
-            <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight text-primary-foreground motion-intro motion-delay-1 sm:text-5xl lg:text-6xl">
               Marine Repair &amp; Ship Maintenance You Can Rely On
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/85">
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/85 motion-intro motion-delay-2">
               Tank cleaning, hull cleaning, chipping, blasting, painting and
               skilled manpower — delivered with quality, safety and timely
               completion across ports, shipyards, dry docks and offshore
               locations.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3 motion-intro motion-delay-3">
               <Link
                 to="/services"
                 className="btn-base bg-signal text-signal-foreground hover:bg-signal-deep"
@@ -89,7 +110,7 @@ function Index() {
       <section className="border-b border-border bg-card">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 lg:grid-cols-4">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center lg:text-left">
+            <div key={stat.label} className="scroll-reveal text-center lg:text-left">
               <p className="font-display text-3xl font-bold text-signal">
                 {stat.value}
               </p>
@@ -147,7 +168,7 @@ function Index() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-lg border border-border bg-card p-6 shadow-sm"
+                className="scroll-reveal rounded-lg border border-border bg-card p-6 shadow-sm"
               >
                 <div className="h-1 w-8 bg-signal" aria-hidden="true" />
                 <h3 className="mt-4 font-display text-lg font-bold">
@@ -180,7 +201,7 @@ function Index() {
               <Link
                 key={service.id}
                 to="/services"
-                className="group rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+                className="scroll-reveal group rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
               >
                 <span className="font-display text-sm font-bold text-signal">
                   {String(index + 1).padStart(2, "0")}
@@ -205,6 +226,40 @@ function Index() {
         </div>
       </section>
 
+      {/* Recent work */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="text-center">
+            <p className="eyebrow text-signal">On the Job</p>
+            <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+              Marine Work in Focus
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+              Ship maintenance, surface preparation and experienced crews at work.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {workPhotos.map((photo) => (
+              <figure key={photo.title} className="scroll-reveal group overflow-hidden rounded-md border border-border bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    width={1053}
+                    height={1014}
+                  />
+                </div>
+                <figcaption className="border-t border-border px-4 py-3 font-display text-sm font-bold text-primary">
+                  {photo.title}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Clients */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <div className="text-center">
@@ -217,7 +272,7 @@ function Index() {
           {clientNames.map((client) => (
             <li
               key={client}
-              className="border-l-2 border-signal pl-4 font-medium text-foreground"
+              className="scroll-reveal border-l-2 border-signal pl-4 font-medium text-foreground"
             >
               {client}
             </li>

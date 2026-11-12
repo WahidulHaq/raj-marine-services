@@ -3,13 +3,7 @@ export const company = {
   tagline: "Marine Repair & Ship Maintenance",
   address:
     "C-501, Bldg. No. 2, Indira Nagar, Jai Shankar Yagnik Marg, Sion Koliwada, Mumbai – 400 037",
-  landlineLabel: "+91 22 2415 7672 / 2407 2248",
-  landline1: "+91 22 2415 7672",
-  landline1Href: "tel:+912224157672",
-  landline2: "+91 22 2407 2248",
-  landline2Href: "tel:+912224072248",
   mobileContacts: [
-    { label: "+91 98 3399 7882", href: "tel:+919833997882" },
     { label: "+91 98690 46209", href: "tel:+919869046209" },
     { label: "+91 98676 57221", href: "tel:+919867657221" },
   ],

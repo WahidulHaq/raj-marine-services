@@ -1,6 +1,6 @@
 # Website updates
 
-- [ ] Add the requested mobile numbers to contact details and verify click-to-call links.
-- [ ] Add the seven named clients to the home page.
-- [ ] Add restrained, accessible motion to improve the site’s visual appeal.
-- [ ] Run the company-detail tests and check the latest preview build.
+- [x] Remove the three specified phone numbers everywhere; retain the two requested mobile contacts.
+- [x] Add uploaded marine-work and team photos to the home page with clear descriptive captions.
+- [x] Add subtle, reduced-motion-friendly visual animation to the home page.
+- [x] Run contact-detail tests, verify the home page, and check the latest preview build.

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact P. S. Raj Shipping Enterprises in Sion Koliwada, Mumbai. Call +91 22 2415 7672 / +91 98 3399 7882 or email info@psrajshipping.com for marine repair, ship maintenance and manpower supply.",
+          "Contact P. S. Raj Shipping Enterprises in Sion Koliwada, Mumbai. Call +91 98690 46209 or +91 98676 57221, or email info@psrajshipping.com for marine repair, ship maintenance and manpower supply.",
       },
       {
         property: "og:title",
@@ -35,11 +35,7 @@ const contactCards = [
   },
   {
     title: "Call Us",
-    lines: [
-      { label: company.landline1, href: company.landline1Href },
-      { label: company.landline2, href: company.landline2Href },
-      ...company.mobileContacts,
-    ],
+    lines: company.mobileContacts,
   },
   {
     title: "Email Us",
